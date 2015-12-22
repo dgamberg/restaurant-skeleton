@@ -26,10 +26,12 @@ app.use('/menu', menu);
 app.use('/', index);
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({expanded: true}));
+app.use(bodyParser.urlencoded({extended: true}));
 
 var mongoDBurl = "mongodb://dg-restaurant-app:dg-restaurant-app@ds061454.mongolab.com:61454/dg-restaurant-app";
 var mongoDB = mongoose.connect(mongoDBurl).connection;
+
+
 
 // Passport Session Configuration //
 app.use(session({
@@ -43,17 +45,14 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoDB.on('open', function(){
-    console.log('Database Online... Meow!');
-});
+
 mongoDB.on('error', function(err){
     if(err) console.log("MONGO ERROR: ", err);
 });
 
-//WildCard
-app.get("/*", function(req,res){
-    var file = req.params[0] || "/views/index.html";
-    res.sendFile(path.join(__dirname, "./public", file));
+
+mongoDB.on('open', function(){
+    console.log('Mongo Database Online... Meow!');
 });
 
 // Listen //
