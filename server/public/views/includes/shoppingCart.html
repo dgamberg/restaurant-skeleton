@@ -2,9 +2,9 @@
     <h3>Current Order</h3>
     <div id="cartContainer" >
         <div ng-repeat="cartItem in currentCart track by $index"  >
-            <div class='cart-item-container well'>
-                <div class='menu-item-name'>{{ cartItem.name }}</div>
-                    <div class='menu-item-price'>
+            <div class='cart-item-container '>
+                <div class='cart-item-name'>{{ cartItem.name }}</div>
+                    <div class='cart-item-price'>
                         {{ cartItem.price | currency: '$'}}&nbsp;&nbsp;&nbsp;
                         <a class="delete-icon" ng-click="removeFromOrder($index)">
                             <img  src="../../assets/images/red_x.png"/>
