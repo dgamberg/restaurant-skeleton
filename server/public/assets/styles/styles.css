@@ -198,3 +198,48 @@ aside {
 /*.ng-leave-active {*/
 /*opacity:0;*/
 /*}*/
+
+.order-item-container {
+    clear: both;
+}
+.order-summary-name{
+    float: left;
+    width: 240px;
+    font-weight: bold;
+}
+.order-summary-price{
+    float: left;
+    font-weight: bold;
+}
+.order-summary-taxprice{
+    float: left;
+    font-weight: bold;
+    padding-left: 4px;
+}
+.order-summary-name{
+    clear: both;
+    width: 240px;
+    font-weight: bold;
+}
+.order-summary-taxname{
+    clear: both;
+    float: left;
+    width: 240px;
+    font-weight: bold;
+    margin-right: -15px;
+}
+
+.order-summary-totals{
+    float:left;
+    width: 240px;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+hr#totalLine {
+    border-top: 2px solid #000;
+    width: 340px;
+    float: left;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}

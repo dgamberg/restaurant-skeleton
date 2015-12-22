@@ -1,4 +1,5 @@
-myApp.controller('MainController', ['$scope', '$http', 'shoppingCart', function($scope, $http, shoppingCart){
+myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', '$location',
+    function($scope, $http, shoppingCart, $location){
     //Menu Display
     $scope.menu = {};
     $scope.menuArray = [];
@@ -48,13 +49,15 @@ myApp.controller('MainController', ['$scope', '$http', 'shoppingCart', function(
 
     $scope.addMenuItem = function(menuItem){
         $http.post('/menu', menuItem).then(function(menuItem){
-            //$scope.itemToEdit = data;
-            //console.log("Posted" , menuItem);
+            console.log("Posted" , menuItem);
         });
-    }
+    };
     $scope.clearCart = function(){
         $scope.currentCart = [];
         $scope.ordersTotal = 0;
-    }
+    };
+    $scope.checkoutOrder = function(){
+        $location.path('/completeOrder');
+    };
 }]);
 
