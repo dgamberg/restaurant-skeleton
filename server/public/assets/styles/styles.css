@@ -162,3 +162,24 @@ aside {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+/* The starting CSS styles for the enter animation */
+.ng-enter {
+    transition: .5s linear all;
+    opacity:0;
+}
+/* The finishing CSS styles for the enter animation */
+.ng-enter-active {
+    opacity:1;
+}
+/*/!* now the element will fade out before it is removed from the DOM *!/*/
+/*.ng-leave {*/
+/*transition: .2s linear all;*/
+/*opacity:1;*/
+/*}*/
+/*.ng-leave-active {*/
+/*opacity:0;*/
+/*}*/
