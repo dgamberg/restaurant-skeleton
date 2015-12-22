@@ -23,7 +23,7 @@
     margin-right: auto;
     margin-bottom: 15px;
     border-radius: 5px;
-    padding: 15px 20px 45px 20px;
+    padding: 15px 10px 55px 18px;
 }
 ul.nav.navbar-stacked {
     float: left;
@@ -32,18 +32,18 @@ ul.nav.navbar-stacked {
 footer{
     clear: both;
 }
-main.ng-scope {
+main {
     float: left;
-    width: 75%;
-
-    margin-left: 20px;
+    width: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
 }
-.menu-item-container.well {
-    width: 75%;
-}
-.cart-item-container.well {
-    width: 75%;
-}
+/*.menu-item-container.well {*/
+    /*width: 75%;*/
+/*}*/
+/*.cart-item-container.well {*/
+    /*width: 75%;*/
+/*}*/
 img#logo-image {
     width: 185px;
     float: left;
@@ -151,4 +151,14 @@ section#dashboard-bottom {
 .dashboard-orders{
     color: #fff;
     font-size: 14px;
+}
+aside {
+    float: left;
+    width: 35%;
+}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 10px;
+    padding-right: 10px;
 }
