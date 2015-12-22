@@ -9,94 +9,94 @@ myApp.config(['$routeProvider', function($routeProvider){
         //MENU CATEGORIES
         when('/appetizers', {
             templateUrl: "views/menu/appetizers.html",
-            controller: "MenuController"
+            controller: "MainController"
         }).
         when('/burgers', {
             templateUrl: "views/menu/burgers.html",
-            controller: "MenuController"
+            controller: "MainController"
         }).
         when('/salads', {
             templateUrl: "views/menu/salads.html",
-            controller: "MenuController"
+            controller: "MainController"
         }).
         when('/sandwiches', {
             templateUrl: "views/menu/sandwiches.html",
-            controller: "MenuController"
+            controller: "MainController"
         }).
         when('/kids-menu', {
             templateUrl: "views/menu/kids.html",
-            controller: "MenuController"
+            controller: "MainController"
         }).
 
         // SITE LINKS
         when('/shopping-cart', {
             templateUrl: "views/partials/shoppingCart.html",
-            controller: "MenuController"
+            controller: "MainController"
         }).
         when('/about', {
             templateUrl: "views/partials/about.html",
-            controller: "MenuController"
+            controller: "MainController"
         }).
         when('/contact', {
             templateUrl: "views/partials/contact.html",
-            controller: "MenuController"
+            controller: "MainController"
         }).
         when('/directions', {
             templateUrl: "views/partials/directions.html",
-            controller: "MenuController"
+            controller: "MainController"
         }).
 
         //USER LINKS
         when('/login', {
             templateUrl: "views/customer/login.html",
-            controller: "MenuController"
+            controller: "MainController"
         }).
         when('/register', {
             templateUrl: "views/customer/register.html",
-            controller: "MenuController"
+            controller: "MainController"
         }).
 
         //USER LOGIN
         when('/user', {
             templateUrl: "views/admin/user.html",
-            controller: "MenuController"
+            controller: "MainController"
         }).
 
         //ADMIN LINKS
         when('/admin-login', {
             templateUrl: "views/admin/admin-login.html",
-            controller: "MenuController"
+            controller: "MainController"
         }).
         when('/admin', {
             templateUrl: "views/admin/admin.html",
-            controller: "MenuController"
+            controller: "MainController"
         }).
         // DASHBOARD MENU
         when('/admin-list-menuItems', {
             templateUrl: "views/admin/admin-list-menuItems.html",
-            controller: "MenuController"
+            controller: "MainController"
         }).
         when('/admin-add-menuItem', {
             templateUrl: "views/admin/admin-add-menuItem.html",
-            controller: "MenuController"
+            controller: "MainController"
         }).
         //CUSTOMERS
         when('/admin-add-customer', {
             templateUrl: "views/admin/admin-add-customer.html",
-            controller: "CustomerController"
+            controller: "MainController"
         }).
 
         when('/admin-list-customers', {
             templateUrl: "views/admin/admin-list-customers.html",
-            controller: "CustomerController"
+            controller: "MainController"
         }).
         when('/admin-live-orders', {
             templateUrl: "views/admin/admin-live-orders.html",
-            controller: "CustomerController"
+            controller: "MainController"
         }).
         when('/failure', {
             templateUrl: "views/customer/failure.html",
-            controller: "MenuController"
+            controller: "MainController"
         }).
         otherwise({
             redirectTo: '/home'

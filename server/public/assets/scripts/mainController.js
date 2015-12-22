@@ -1,4 +1,4 @@
-myApp.controller('MenuController', ['$scope', '$http', 'shoppingCart', function($scope, $http, shoppingCart){
+myApp.controller('MainController', ['$scope', '$http', 'shoppingCart', function($scope, $http, shoppingCart){
     //Menu Display
     $scope.menu = {};
     $scope.menuArray = [];
