@@ -6,15 +6,24 @@
                 <div class='menu-item-name'>{{ cartItem.name }}</div>
                     <div class='menu-item-price'>
                         {{ cartItem.price | currency: '$'}}&nbsp;&nbsp;&nbsp;
-                        <button class="btn btn-danger" ng-click="removeFromOrder($index)">X</button>
+                        <a class="delete-icon" ng-click="removeFromOrder($index)">
+                            <img  src="../../assets/images/red_x.png"/>
+                        </a>
                     </div>
                 </div>
             </div>
-        <div class="order-total">
-            Your Order Total: {{ ordersTotal | currency: '$'}}
-        </div>
-        </div>
+            <div class="order-total">
+                Your Order Total: {{ ordersTotal | currency: '$'}}
+            </div>
+            <div id="checkoutButton">
+                <button class="btn btn-primary" ng-click="checkoutOrder()">
+                    Proceed To Checkout
+                </button>
+                <button class="btn btn-primary" ng-click="clearCart()">
+                    Start Over
+                </button>
+            </div>
 
-
+        </div>
     </div>
 </section>

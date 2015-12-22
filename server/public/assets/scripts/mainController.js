@@ -52,6 +52,9 @@ myApp.controller('MainController', ['$scope', '$http', 'shoppingCart', function(
             //console.log("Posted" , menuItem);
         });
     }
-
+    $scope.clearCart = function(){
+        $scope.currentCart = [];
+        $scope.ordersTotal = 0;
+    }
 }]);
 
