@@ -243,3 +243,9 @@ hr#totalLine {
     margin-bottom: 5px;
     margin-top: 5px;
 }
+.admin-container{
+    padding-bottom: 20px;
+}
+.live-orders-container {
+    margin-bottom: 25px;
+}
