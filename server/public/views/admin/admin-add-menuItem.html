@@ -1,0 +1,20 @@
+<div class="container" ng-controller="MenuController">
+    <h3>Add Menu Item</h3>
+    <form id="addMenuItem" ng-model="menuItem">
+        <div>
+            <input type="text" ng-model="menuItem.name" id="itemName" name="itemName" placeholder="Item Name"/>
+        </div>
+        <div>
+            <input type="text" ng-model="menuItem.category" id="itemCategory" name="itemCategory" placeholder="Item Category"/>
+        </div>
+        <div>
+            <input type="text" ng-model="menuItem.price" id="itemPrice" name="itemPrice" placeholder="Item Price"/>
+        </div>
+        <div>
+            <textarea type="text" ng-model="menuItem.description" class="item-description" placeholder="Description"></textarea>
+        </div>
+        <div>
+            <button class="btn btn-primary" ng-click="addMenuItem(menuItem)" >Add Menu Item</button>
+        </div>
+    </form>
+</div>

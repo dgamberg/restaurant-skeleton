@@ -1,0 +1,5 @@
+<div ng-controller="CustomerController">
+    <div class="well" id="edit-container" ng-repeat="customer in customersArray">
+        <a class="edit-link" ng-click="editCustomer(customer.id)">{{customer.customer_id}}{{customer.lastName}}, {{customer.email}}</a>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="container" ng-controller="CustomerController">
+    <h3>Edit Customer</h3>
+    <form id="editItem">
+        <input type="text" class="item-name" value="{{data.name}}"/>
+        <input type="text" class="item-category" value="{{ data.category}}"/>
+        <textarea type="text" class="item-description">{{data.description}}</textarea>
+        <button ng-click="saveItem(data.id)" >Save Item</button>
+    </form>
+</div>
