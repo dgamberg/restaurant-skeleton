@@ -1,5 +1,7 @@
-<section ng-show="ordersTotal > 0">
+
+<section ng-show="cartIsVisible === true">
     <h3>Current Order</h3>
+
     <div id="cartContainer" >
         <div ng-repeat="cartItem in currentCart track by $index"  >
             <div class='cart-item-container '>

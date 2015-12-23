@@ -4,7 +4,7 @@ myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', '$locati
     $scope.menu = {};
     $scope.menuArray = [];
     $scope.ordersTotal = 0;
-
+    $scope.cartIsVisible;
     $scope.displayMenu = function(){
         $http.get('/menu').then(function(response){
             $scope.menuArray = response.data;
@@ -17,6 +17,7 @@ myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', '$locati
     $scope.ordersTotal = shoppingCart.ordersTotal;
 
     $scope.addToOrder = function(menuItem){
+        $scope.showCart();
         $scope.currentCart.push(menuItem);
         shoppingCart.ordersTotal = 0;
         $scope.ordersTotal = 0;
@@ -36,6 +37,9 @@ myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', '$locati
             shoppingCart.ordersTotal += parseFloat($scope.currentCart[i].price);
             $scope.ordersTotal = shoppingCart.ordersTotal;
         }
+        if($scope.ordersTotal == 0 ){
+            $scope.hideCart();
+        }
     };
     //Pull one menu item by ID
     $scope.itemToEdit = {};
@@ -53,11 +57,21 @@ myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', '$locati
         });
     };
     $scope.clearCart = function(){
+        $scope.hideCart();
         $scope.currentCart = [];
         $scope.ordersTotal = 0;
     };
+
     $scope.checkoutOrder = function(){
         $location.path('/completeOrder');
+        $scope.hideCart();
+    };
+
+    $scope.hideCart = function(){
+        $scope.cartIsVisible = false;
+    };
+    $scope.showCart = function(){
+        $scope.cartIsVisible = true;
     };
 }]);
 
