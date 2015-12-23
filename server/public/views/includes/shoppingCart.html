@@ -9,11 +9,12 @@
                     <div class='cart-item-price'>
                         {{ cartItem.price | currency: '$'}}&nbsp;&nbsp;&nbsp;
                         <a class="delete-icon" ng-click="removeFromOrder($index)">
-                            <img  src="../../assets/images/red_x.png"/>
+                            <img class="red-x" src="../../assets/images/red_x.png"/>
                         </a>
                     </div>
                 </div>
             </div>
+        <hr class="totalLine">
             <div class="order-total">
                 Your Order Total: {{ ordersTotal | currency: '$'}}
             </div>
@@ -21,7 +22,7 @@
                 <button class="btn btn-primary" ng-click="checkoutOrder()">
                     Proceed To Checkout
                 </button>
-                <button class="btn btn-primary" ng-click="clearCart()">
+                <button class="btn btn-primary" ng-click="startOver()">
                     Start Over
                 </button>
             </div>

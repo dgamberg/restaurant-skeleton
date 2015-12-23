@@ -35,7 +35,7 @@
     margin-right: auto;
     margin-bottom: 15px;
     border-radius: 5px;
-    padding: 5px 5px 23px 10px;
+    padding: 8px 5px 8px 10px;
 }
 ul.nav.navbar-stacked {
     float: left;
@@ -72,11 +72,10 @@ img#logo-image {
     margin-top: 10px;
 }
 .order-total {
-    padding: 10px 43px 10px 10px;
+    padding: 10px 30px 10px 10px;
     text-align: right;
     margin-bottom: 10px;
     font-size: 16px;
-    border-top: 3px solid #000;
 }
 #login-box {
     float: right;
@@ -199,6 +198,9 @@ aside {
 /*opacity:0;*/
 /*}*/
 
+
+
+
 .order-item-container {
     clear: both;
 }
@@ -236,7 +238,8 @@ aside {
     font-weight: bold;
 
 }
-hr#totalLine {
+hr.totalLine {
+    clear: both;
     border-top: 2px solid #000;
     width: 340px;
     float: left;
@@ -248,4 +251,9 @@ hr#totalLine {
 }
 .live-orders-container {
     margin-bottom: 25px;
+}
+
+.red-x {
+    width: 15px;
+    margin-top: -4px;
 }

@@ -20,13 +20,13 @@
 
 </head>
     <body  ng-controller="MainController">
-        <section class="container"  ng-cloak="">
+        <section class="container"  >
 
             <header ng-include="'/views/includes/navigation.html'"></header>
 
             <nav ng-include="'/views/includes/menu.html'"></nav>
 
-            <main ng-view></main>
+            <main ng-view ng-cloak=""></main>
 
             <aside ng-include="'/views/includes/shoppingCart.html'"></aside>
 

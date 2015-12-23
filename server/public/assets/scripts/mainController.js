@@ -66,6 +66,10 @@ myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', '$locati
         $location.path('/completeOrder');
         $scope.hideCart();
     };
+    $scope.startOver = function(){
+        $location.path('/home');
+        $scope.clearCart();
+    };
 
     $scope.hideCart = function(){
         $scope.cartIsVisible = false;

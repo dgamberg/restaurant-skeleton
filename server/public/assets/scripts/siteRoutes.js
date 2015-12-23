@@ -50,5 +50,8 @@ myApp.config(['$routeProvider', function($routeProvider){
         //USER LOGIN
         when('/user', {
             templateUrl: "views/admin/user.html"
+        }).
+        otherwise('/home', {
+            templateUrl: "/views/partials/home.html"
         });
 }]);
