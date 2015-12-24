@@ -14,6 +14,8 @@ var user = require('./routes/user');
 var index = require('./routes/index');
 var customer = require('./routes/customer');
 var menu = require('./routes/menu');
+var order = require('./routes/order');
+
 
 // App Set //
 app.set("port", (process.env.PORT || 5000));
@@ -23,6 +25,7 @@ app.use('/register', register);
 app.use('/user', user);
 app.use('/customer', customer);
 app.use('/menu', menu);
+app.use('/order', menu);
 app.use('/', index);
 
 app.use(bodyParser.json());
