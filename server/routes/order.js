@@ -5,12 +5,20 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 mongoose.model('Order', new Schema({
-    "_id": String,
-    "menu_id": Number,
-    "name": String,
-    "price": String,
-    "category": String,
-    "description": String}, {
+    "_id": ObjectId,
+    "order_timestamp": Timestamp,
+    "cart_items": Array,
+    "cartTotal": Number,
+    "firstName": String,
+    "lastName": String,
+    "email": String,
+    "street": String,
+    "city": String,
+    "state": String,
+    "zip": Number,
+    "cc_number": Number,
+    "cc_type": String,
+    "cc_exp": String }, {
     collection: 'orders'
 }));
 var Order = mongoose.model('Order');
@@ -28,11 +36,19 @@ router.get('/', function(req,res){
 router.post('/', function(req,res){
     var addedOrderItem = new Order({
         "_id": null,
-        "menu_id": null,
-        "name": req.body.name,
-        "price": req.body.price,
-        "category": req.body.category,
-        "description": req.body.description
+        "order_timestamp": null,
+        "cart_items": Array,
+        "cartTotal": Number,
+        "firstName": String,
+        "lastName": String,
+        "email": String,
+        "street": String,
+        "city": String,
+        "state": String,
+        "zip": Number,
+        "cc_number": Number,
+        "cc_type": String,
+        "cc_exp": String
     });
 
     addedOrderItem.save(function(err, data){
