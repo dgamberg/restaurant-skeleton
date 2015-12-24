@@ -71,6 +71,11 @@ myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', '$locati
         $scope.clearCart();
     };
 
+    $scope.changeMyOrder = function(){
+        $location.path('/appetizers');
+        $scope.showCart();
+    }
+
     $scope.hideCart = function(){
         $scope.cartIsVisible = false;
     };
