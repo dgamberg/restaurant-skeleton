@@ -4,23 +4,26 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+var bodyParser = require('body-parser');
+router.use(bodyParser.json());
+router.use(bodyParser.urlencoded({extended: true}));
+
+var CartItems = new Schema({
+    "item_name": String
+});
+
 mongoose.model('Order', new Schema({
-    "_id": ObjectId,
-    "order_timestamp": Timestamp,
-    "cart_items": Array,
+    "_id": String,
+    "orderId": Number,
+    "orderDate": { type: Date, default: Date.now },
+    "cartItems": [ String],
     "cartTotal": Number,
-    "firstName": String,
-    "lastName": String,
-    "email": String,
-    "street": String,
-    "city": String,
-    "state": String,
-    "zip": Number,
-    "cc_number": Number,
-    "cc_type": String,
-    "cc_exp": String }, {
+    "customerId": String
+    }, {
     collection: 'orders'
 }));
+
+
 var Order = mongoose.model('Order');
 
 console.log("Orders Module Online...");
@@ -36,21 +39,13 @@ router.get('/', function(req,res){
 router.post('/', function(req,res){
     var addedOrderItem = new Order({
         "_id": null,
-        "order_timestamp": null,
-        "cart_items": Array,
-        "cartTotal": Number,
-        "firstName": String,
-        "lastName": String,
-        "email": String,
-        "street": String,
-        "city": String,
-        "state": String,
-        "zip": Number,
-        "cc_number": Number,
-        "cc_type": String,
-        "cc_exp": String
+        "orderDate": Date.now(),
+        "orderId": req.body.orderId,
+        "cartItems": req.body.cartItems,
+        "cartTotal": req.body.cartTotal,
+        "customerId": req.body.customerId
     });
-
+    console.log(req.body);
     addedOrderItem.save(function(err, data){
         if(err) console.log(err);
         res.send(data);

@@ -4,7 +4,19 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-mongoose.model('Customer', new Schema({ "customerId": Number, "firstName": String, "lastName": String, "email": String, "street": String, "city": String, "state": String, "zip": String}, {collection: 'customers'}));
+mongoose.model('Customer',
+    new Schema({
+        "customerId": Number,
+        "firstName": String,
+        "lastName": String,
+        "email": String,
+        "street": String,
+        "city": String,
+        "state": String,
+        "zip": String,
+    }, {
+        collection: 'customers'
+    }));
 var Customer = mongoose.model('Customer');
 
 console.log("Customer Module Online...");
@@ -16,7 +28,7 @@ router.post('/', function(req,res){
         "street" : req.body.street,
         "city" : req.body.city,
         "state" : req.body.state,
-        "zip" : req.body.zip
+        "zip" : req.body.zip,
     });
 
     addedCustomer.save(function(err, data){

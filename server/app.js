@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
-
+var morgan = require('morgan');
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
@@ -25,7 +25,7 @@ app.use('/register', register);
 app.use('/user', user);
 app.use('/customer', customer);
 app.use('/menu', menu);
-app.use('/order', menu);
+app.use('/order', order);
 app.use('/', index);
 
 app.use(bodyParser.json());
@@ -34,7 +34,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 var mongoDBurl = "mongodb://dg-restaurant-app:dg-restaurant-app@ds061454.mongolab.com:61454/dg-restaurant-app";
 var mongoDB = mongoose.connect(mongoDBurl).connection;
 
-
+app.use(morgan('dev'));
 
 // Passport Session Configuration //
 app.use(session({
