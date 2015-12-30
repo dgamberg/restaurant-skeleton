@@ -29,13 +29,14 @@ router.get('/', function(req,res){
 
 //Post an Update to the ID
 router.post('/', function(req,res){
-    console.log(req.body.orderID);
+
     //create new object to send from request body
     var newIDObject = new orderID({
         "_id": null,
         "orderID": req.body.orderID,
         "requestDate": Date.now()
     });
+
     //send object that was created and save as new record
     newIDObject.save(function(err, data){
         if(err) console.log(err);
