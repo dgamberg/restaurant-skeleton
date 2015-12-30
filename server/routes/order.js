@@ -8,21 +8,17 @@ var bodyParser = require('body-parser');
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({extended: true}));
 
-var CartItems = new Schema({
-    "item_name": String
-});
 
 mongoose.model('Order', new Schema({
     "_id": String,
     "orderId": Number,
     "orderDate": { type: Date, default: Date.now },
-    "cartItems": [ String],
+    "cartItems": Array,
     "cartTotal": Number,
     "customerId": String
     }, {
     collection: 'orders'
 }));
-
 
 var Order = mongoose.model('Order');
 
@@ -40,12 +36,12 @@ router.post('/', function(req,res){
     var addedOrderItem = new Order({
         "_id": null,
         "orderDate": Date.now(),
-        "orderId": req.body.orderId,
+        "orderId": null,
         "cartItems": req.body.cartItems,
         "cartTotal": req.body.cartTotal,
         "customerId": req.body.customerId
     });
-    console.log(req.body);
+
     addedOrderItem.save(function(err, data){
         if(err) console.log(err);
         res.send(data);

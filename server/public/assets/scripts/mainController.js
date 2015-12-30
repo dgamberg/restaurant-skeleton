@@ -56,6 +56,7 @@ myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', '$locati
             console.log("Posted" , menuItem);
         });
     };
+
     $scope.clearCart = function(){
         $scope.hideCart();
         $scope.currentCart = [];
@@ -66,6 +67,7 @@ myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', '$locati
         $location.path('/completeOrder');
         $scope.hideCart();
     };
+
     $scope.startOver = function(){
         $location.path('/home');
         $scope.clearCart();
@@ -74,13 +76,30 @@ myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', '$locati
     $scope.changeMyOrder = function(){
         $location.path('/appetizers');
         $scope.showCart();
-    }
+    };
 
     $scope.hideCart = function(){
         $scope.cartIsVisible = false;
     };
+
     $scope.showCart = function(){
         $scope.cartIsVisible = true;
+    };
+
+    $scope.getNewOrderID = function(){
+        $http.get('/orderID').then(function(response){
+            $scope.orderID = response.data.orderID;
+            $scope.orderID++;
+            $scope.postNewIDToServer($scope.orderID);
+        });
+
+    };
+    $scope.postNewIDToServer = function(id){
+        $http.post('/orderID', {
+            orderID: id
+        }).then(function(){
+            console.log("New ID Posted ",  id);
+        });
     };
 }]);
 

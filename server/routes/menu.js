@@ -10,7 +10,7 @@ var Menu = mongoose.model('Menu');
 console.log("Menu Module Online...");
 
 router.get('/', function(req,res){
-    Menu.find({}, function(err, data){
+    Menu.find({ }, function(err, data){
         if(err){ console.log("ERROR!: ", err); }
         res.send(data);
 
