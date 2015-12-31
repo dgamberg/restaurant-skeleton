@@ -4,7 +4,7 @@ myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', '$locati
     $scope.menu = {};
     $scope.menuArray = [];
     $scope.ordersTotal = 0;
-    $scope.cartIsVisible;
+    $scope.cartIsVisible = false;
     $scope.displayMenu = function(){
         $http.get('/menu').then(function(response){
             $scope.menuArray = response.data;
@@ -43,7 +43,6 @@ myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', '$locati
     };
     //Pull one menu item by ID
     $scope.itemToEdit = {};
-
     $scope.getItem = function(id){
         $http.get('/menu/:' + id).then(function(data){
             //$scope.itemToEdit = data;
@@ -92,7 +91,6 @@ myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', '$locati
             $scope.orderID++;
             $scope.postNewIDToServer($scope.orderID);
         });
-
     };
     $scope.postNewIDToServer = function(id){
         $http.post('/orderID', {
@@ -101,5 +99,25 @@ myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', '$locati
             console.log("New ID Posted ",  id);
         });
     };
+
+    $scope.newCustomer = {};
+    $scope.fullOrder = {};
+    $scope.completeOrder = function(){
+        //get a new order ID
+        $scope.getNewOrderID();
+
+            $http.post('/order', {
+
+                "_id": null,
+                "orderDate": Date.now(),
+                "orderId": $scope.orderID,
+                "cartItems": $scope.currentCart,
+                "cartTotal":  $scope.ordersTotal,
+                "customerId": "123"
+            }).then(function(){
+                console.log("Order Posted ",  $scope.orderID);
+            });
+    };
+
 }]);
 

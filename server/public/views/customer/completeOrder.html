@@ -1,7 +1,7 @@
 <div class="instructions">
     <div class="container-fluid" >
         <h3 id="welcome" class="lead">Complete My Order</h3>
-        <form id="addCustomer" ng-model="customerForm" >
+
             <section  class="well" >
                 <label>Order Summary:</label>
                 <div ng-show="ordersTotal" class="container">
@@ -48,46 +48,45 @@
 
                 </div>
             </section>
+        <form id="addCustomer" ng-model="newCustomerForm" >
             <section class="well" >
                     <div>
                         <label for="firstName">First Name</label>
-                        <input type="text" ng-model="customer.firstName" id="firstName" name="firstName" />
+                        <input type="text" ng-model="newCustomer.firstName" id="firstName" name="firstName" />
                     </div>
                     <div>
                         <label for="lastName">Last Name</label>
-                        <input type="text"  ng-model="customer.lastName" id="lastName" name="lastName" />
+                        <input type="text"  ng-model="newCustomer.lastName" id="lastName" name="lastName" />
                     </div>
                     <div>
                         <label for="email">Email</label>
-                        <input type="text"  ng-model="customer.email "id="email" name="email" />
+                        <input type="text"  ng-model="newCustomer.email "id="email" name="email" />
                     </div>
                     <div>
                         <label for="street">Street</label>
-                        <input type="text"  ng-model="customer.street" id="street" name="street"/>
+                        <input type="text"  ng-model="newCustomer.street" id="street" name="street"/>
                     </div>
                     <div>
                         <label for="city">City</label>
-                        <input type="text"  ng-model="customer.city" id="city" name="city" />
+                        <input type="text"  ng-model="newCustomer.city" id="city" name="city" />
                     </div>
                     <div>
                         <label for="state">State</label>
-                        <input type="text"  ng-model="customer.state" id="state" name="state"/>
+                        <input type="text"  ng-model="newCustomer.state" id="state" name="state"/>
                     </div>
                     <div>
                         <label for="zip">Zip</label>
-                        <input type="text" ng-model="customer.zip" id="zip" name="zip"   />
+                        <input type="text" ng-model="newCustomer.zip" id="zip" name="zip"   />
                     </div>
             </section>
 
             <section class="well" >
                 <label for="cardType">Card Type</label>
-
                     <select id="cardType" >
                         <option  value="">- Select -</option>
                         <option name="Visa" value="Visa">Visa</option>
                         <option name="MasterCard" value="MasterCard">MasterCard</option>
                     </select>
-
                 <div>
                     <label for="CardNumber">Card Number</label>
                     <input id="CardNumber" type="text" />
@@ -97,10 +96,7 @@
                 </div>
             </section>
 
-            <button ng-click="getNewOrderID()" class="btn btn-primary">Get Order ID</button>
-            <p>{{orderID}}</p>
-
-            <button ng-click="saveOrder()" class="btn btn-primary" >Complete My Order</button>
+            <button ng-click="completeOrder()" class="btn btn-primary" >Complete My Order</button>
 
             <div ng-model="messages" ng-show="messages">{{messages}}</div>
         </form>

@@ -36,7 +36,7 @@ router.post('/', function(req,res){
     var addedOrderItem = new Order({
         "_id": null,
         "orderDate": Date.now(),
-        "orderId": null,
+        "orderId": req.body.orderID,
         "cartItems": req.body.cartItems,
         "cartTotal": req.body.cartTotal,
         "customerId": req.body.customerId
