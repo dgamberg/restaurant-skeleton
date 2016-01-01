@@ -13,7 +13,7 @@ mongoose.model('Customer',
         "street": String,
         "city": String,
         "state": String,
-        "zip": String,
+        "zip": String
     }, {
         collection: 'customers'
     }));
@@ -28,7 +28,7 @@ router.post('/', function(req,res){
         "street" : req.body.street,
         "city" : req.body.city,
         "state" : req.body.state,
-        "zip" : req.body.zip,
+        "zip" : req.body.zip
     });
 
     addedCustomer.save(function(err, data){

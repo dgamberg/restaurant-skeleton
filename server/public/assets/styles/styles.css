@@ -204,6 +204,11 @@ aside {
 .order-item-container {
     clear: both;
 }
+
+.order-button-container{
+    clear: both;
+    padding-top: 15px;
+}
 .order-summary-name{
     float: left;
     width: 240px;
@@ -241,7 +246,7 @@ aside {
 hr.totalLine {
     clear: both;
     border-top: 2px solid #000;
-    width: 340px;
+    width: 40%;
     float: left;
     margin-bottom: 5px;
     margin-top: 5px;

@@ -28,7 +28,7 @@
                                 Tax:
                             </div>
                             <div class='order-summary-taxprice'>
-                                {{ ordersTotal * .068| currency: '$'}}&nbsp;&nbsp;&nbsp;
+                                {{ orderTax | currency: '$'}}&nbsp;&nbsp;&nbsp;
                             </div>
                         </div>
                         <hr class="totalLine">
@@ -37,10 +37,10 @@
                                 Your Order Total:
                             </div>
                             <div class='order-summary-totals'>
-                                {{ ordersTotal + (ordersTotal * .068)| currency:'$' }}
+                                {{ finalTotal | currency:'$' }}
                             </div>
                         </div>
-                        <div  class='order-item-container'>
+                        <div  class='order-button-container'>
                             <button ng-click="changeMyOrder()" class="btn btn-primary" >Change My Order</button>
                         </div>
 

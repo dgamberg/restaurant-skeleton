@@ -14,7 +14,8 @@ mongoose.model('Order', new Schema({
     "orderId": Number,
     "orderDate": { type: Date, default: Date.now },
     "cartItems": Array,
-    "cartTotal": Number,
+    "orderTotal": Number,
+    "finalTotal": Number,
     "customerId": String
     }, {
     collection: 'orders'
@@ -38,7 +39,8 @@ router.post('/', function(req,res){
         "orderDate": Date.now(),
         "orderId": req.body.orderID,
         "cartItems": req.body.cartItems,
-        "cartTotal": req.body.cartTotal,
+        "orderTotal": req.body.orderTotal,
+        "finalTotal": req.body.finalTotal,
         "customerId": req.body.customerId
     });
 
