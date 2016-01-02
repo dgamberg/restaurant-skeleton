@@ -18,6 +18,8 @@ var order = require('./routes/order');
 var orderID = require('./routes/orderID');
 var customerID = require('./routes/customerID');
 
+var mail = require('./routes/mail')
+
 // App Set //
 app.set("port", (process.env.PORT || 5000));
 
@@ -29,6 +31,7 @@ app.use('/menu', menu);
 app.use('/order', order);
 app.use('/orderID', orderID);
 app.use('/customerID', customerID);
+app.use('/mail', mail);
 app.use('/', index);
 
 
