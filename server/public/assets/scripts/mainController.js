@@ -87,7 +87,6 @@ myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', '$locati
         };
 
         $scope.completeOrder = function(){
-
             //generate a order ID
             $scope.getNewOrderID();
 
