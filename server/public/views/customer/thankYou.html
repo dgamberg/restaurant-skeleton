@@ -1,6 +1,40 @@
-
-<h3>Thank You, {{customer.firstName}}</h3>
-<h5>Order Number: {{orderID}}</h5>
-<h5>Total charged: {{finalTotal | currency}}</h5>
-
-<h5>{{orderDate | date }}</h5>
+<h2>Thank You!</h2>
+<h5>Your order has been sent</h5>
+<h3>Order number:</h3>
+<h2>{{orderID}}</h2>
+<hr/>
+<h5>Customer Name: {{customer.firstName}}&nbsp;{{customer.lastName}}</h5>
+<hr/>
+<h3>Summary</h3>
+<div ng-repeat="cartItem in currentCart track by $index"  >
+    <div class='order-item-container '>
+        <div class='order-summary-name container'>
+            {{ cartItem.name }}
+        </div>
+        <div class='order-summary-price'>
+            {{ cartItem.price | currency: '$'}}&nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+</div>
+<section >
+    <hr class="totalLine">
+    <div class="container">
+        <div class='order-summary-taxname'>
+            Order SubTotal:
+        </div>
+        <div class='order-summary-totals'>
+            &nbsp;{{ ordersTotal | currency:'$' }}
+        </div>
+        <div class='order-summary-taxname'>
+            Tax:
+        </div>
+        <div class='order-summary-taxprice'>
+            {{ orderTax | currency: '$'}}&nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+    <hr class="totalLine">
+    <div class='order-item-container'>
+        <div class='order-summary-totals-confirm' >
+            Final Total: &nbsp; {{ finalTotal | currency:'$' }}
+        </div>
+    </div>
