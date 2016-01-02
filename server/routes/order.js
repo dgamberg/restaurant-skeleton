@@ -11,12 +11,13 @@ router.use(bodyParser.urlencoded({extended: true}));
 
 mongoose.model('Order', new Schema({
     "_id": String,
-    "orderId": Number,
+    "orderID": Number,
     "orderDate": { type: Date, default: Date.now },
     "cartItems": Array,
     "orderTotal": Number,
     "finalTotal": Number,
-    "customerId": String
+    "customerID": String,
+    "customerInfo:": Object
     }, {
     collection: 'orders'
 }));
@@ -34,14 +35,16 @@ router.get('/', function(req,res){
 });
 
 router.post('/', function(req,res){
+
     var addedOrderItem = new Order({
         "_id": null,
         "orderDate": Date.now(),
-        "orderId": req.body.orderID,
+        "customerID": req.body.customerID,
+        "orderID": req.body.orderID,
         "cartItems": req.body.cartItems,
-        "orderTotal": req.body.orderTotal,
+        "orderTotal": req.body.ordersTotal,
         "finalTotal": req.body.finalTotal,
-        "customerId": req.body.customerId
+        "customerInfo:": req.body.newCustomer
     });
 
     addedOrderItem.save(function(err, data){

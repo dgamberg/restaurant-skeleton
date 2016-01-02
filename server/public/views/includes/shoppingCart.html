@@ -14,9 +14,9 @@
                     </div>
                 </div>
             </div>
-        <hr class="totalLine">
+        <hr class="cartTotalLine">
             <div class="order-total">
-                Your Order Total: {{ ordersTotal | currency: '$'}}
+                Your Order Total: <span class="total-text">{{ ordersTotal | currency: '$'}}</span>
             </div>
             <div id="checkoutButton">
                 <button class="btn btn-primary" ng-click="checkoutOrder()">

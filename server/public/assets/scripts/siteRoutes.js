@@ -46,6 +46,9 @@ myApp.config(['$routeProvider', function($routeProvider){
         when('/completeOrder', {
             templateUrl: "views/customer/completeOrder.html"
         }).
+        when('/thankYou', {
+            templateUrl: "views/customer/thankYou.html"
+        }).
 
         //USER LOGIN
         when('/user', {

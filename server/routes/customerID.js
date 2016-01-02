@@ -11,7 +11,7 @@ router.use(bodyParser.urlencoded({extended: true}));
 //Order ID Schema
 var customerID = mongoose.model('customerID', new Schema({
     "_id": String,
-    "customerID": Number,
+    "customerID": { type: Number, index: true},
     "requestDate": Date
 }, {
     collection: 'customerID'
