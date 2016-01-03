@@ -281,3 +281,33 @@ hr.cartTotalLine {
 .total-text{
     padding-left: 5px;
 }
+.order-entry{
+    float: left;
+    width: 33%;
+}
+
+.order-entry-container{
+    clear: both;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 15px;
+}
+.customer-list-container{
+    clear: both;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.order-entry-total{
+    clear: both;
+    margin-top: 20px;
+}
+.order-cart-price{
+    float: right;
+}
+.order-cart-items{
+    clear: both;
+}

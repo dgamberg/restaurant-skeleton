@@ -54,6 +54,32 @@ myApp.config(['$routeProvider', function($routeProvider){
         when('/user', {
             templateUrl: "views/admin/user.html"
         }).
+
+        when('/admin-login', {
+            templateUrl: "views/admin/admin-login.html"
+        }).
+        when('/admin', {
+            templateUrl: "views/admin/admin.html"
+        }).
+        // DASHBOARD MENU
+        when('/admin-list-menuItems', {
+            templateUrl: "views/admin/admin-list-menuItems.html"
+        }).
+        when('/admin-add-menuItem', {
+            templateUrl: "views/admin/admin-add-menuItem.html"
+        }).
+        //CUSTOMERS
+        when('/admin-add-customer', {
+            templateUrl: "views/admin/admin-add-customer.html"
+        }).
+        when('/admin-list-customers', {
+            templateUrl: "views/admin/admin-list-customers.html"
+        }).
+        when('/admin-list-orders', {
+            templateUrl: "views/admin/admin-list-orders.html"
+        }).
+
+
         otherwise('/home', {
             templateUrl: "/views/partials/home.html"
         });

@@ -191,17 +191,23 @@ myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', '$locati
         };
 
         //-------------------------------------------------//
-        // ADMIN FUNCTIONS - TRANSFER TO ADMIN CONTROLLER  //
+        //                   ADMIN                         //
         //-------------------------------------------------//
+        $scope.orderList = [];
+        $scope.loadOrdersList = function(){
+            $http.get('/order').then(function(response){
+                $scope.orderList = response.data;
+            });
+        };
+        $scope.loadOrdersList();
 
-        //Pull one menu item by ID
-        //$scope.itemToEdit = {};
-        //$scope.getItem = function(id){
-        //    $http.get('/menu/:' + id).then(function(data){
-        //        //$scope.itemToEdit = data;
-        //        console.log($scope.itemToEdit);
-        //    });
-        //};
+        $scope.customerList = [];
+        $scope.loadCustomerList = function(){
+            $http.get('/customer').then(function(response){
+                $scope.customerList = response.data;
+            });
+        };
+        $scope.loadCustomerList();
 
         $scope.addMenuItem = function(menuItem){
             $http.post('/menu', menuItem).then( function(menuItem){
