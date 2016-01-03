@@ -1,5 +1,6 @@
-<div ng-controller="MainController">
-    <div class="well" id="edit-container" ng-repeat="item in menuArray">
-        <a class="btn-lg btn-info" ng-click="getItem(item.id)" href="#">{{item.name}}</a>
+
+<nav ng-include="'/views/admin/admin-menu.html'"></nav>
+    <h3>Menu Items</h3>
+    <div  class="order-entry-container" id="edit-container" ng-repeat="item in menuArray | orderBy: 'menu_id'">
+        <div>ID:{{item.menu_id}}&nbsp;&nbsp;{{item.name}}&nbsp;({{item.price}}) <a class="edit-button btn-sm btn-primary" ng-click="getItem(item.id)" href="#">Edit</a></div>
     </div>
-</div>

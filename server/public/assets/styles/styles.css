@@ -289,14 +289,14 @@ hr.cartTotalLine {
 .order-entry-container{
     clear: both;
     margin-bottom: 20px;
-    background-color: #f5f5f5;
+    background-color:  rgba(143, 149, 148, 0.15);;
     border-radius: 5px;
     padding: 15px;
 }
 .customer-list-container{
     clear: both;
     margin-bottom: 20px;
-    background-color: #f5f5f5;
+    background-color:  rgba(143, 149, 148, 0.15);;
     border-radius: 5px;
     padding: 15px;
 }
@@ -310,4 +310,8 @@ hr.cartTotalLine {
 }
 .order-cart-items{
     clear: both;
+}
+.edit-button{
+    float: right;
+    margin-top: -5px;
 }

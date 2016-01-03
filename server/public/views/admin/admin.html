@@ -1,31 +1,30 @@
 
     <section id="admin-dashboard" class="container">
+        <nav ng-include="'/views/admin/admin-menu.html'"></nav>
         <header class="admin-container">
-            <h3>Dashboard</h3>
+            <h3>Dashboard Home</h3>
         </header>
-        <section class="container">
-            <div class="live-orders-container">
-                <a class="btn-lg btn-success" href="#/admin-live-orders">Current Live Orders (9)</a>
-            </div>
-        </section>
+
         <section id="dashboard-bottom" class="container">
             <div class="panel">
-                <h4>Menu</h4>
-                <a class="btn btn-info" href="#/admin-list-menuItems">View Items</a>
-                <a class="btn btn-info" href="#/admin-add-menuItem">Add Item</a>
-                <a class="btn btn-info" href="#/admin-edit-menuItem">Edit Item</a>
+                <h4>Orders</h4>
+                <a class="btn btn-primary"   href="#/admin-list-orders">View Orders</a>
+                <a class="btn btn-primary" href="#/admin-add-orders">Add An Order</a>
+                <a class="btn btn-primary"   href="#/admin-edit-orders">Edit Order</a>
             </div>
             <div class="panel">
                 <h4>Customers</h4>
-                <a class="btn btn-info" href="#/admin-list-customers">View Customers</a>
-                <a class="btn btn-info" href="#/admin-add-customer">Add Customer</a>
-                <a class="btn btn-info"  href="/admin-edit-customer">Edit Customer</a>
+                <a class="btn btn-primary" href="#/admin-list-customers">View Customers</a>
+                <a class="btn btn-primary" href="#/admin-add-customer">Add Customer</a>
+                <a class="btn btn-primary"  href="/admin-edit-customer">Edit Customer</a>
             </div>
             <div class="panel">
-                <h4>Orders</h4>
-                <a class="btn btn-info"   href="#/admin-list-orders">View Orders</a>
-                <a class="btn btn-info" href="#/admin-add-orders">Add An Order</a>
-                <a class="btn btn-info"   href="#/admin-edit-orders">Edit Order</a>
+                <h4>Menu</h4>
+                <a class="btn btn-primary" href="#/admin-list-menuItems">View Items</a>
+                <a class="btn btn-primary" href="#/admin-add-menuItem">Add Item</a>
+                <a class="btn btn-primary" href="#/admin-edit-menuItem">Edit Item</a>
             </div>
+
+
         </section>
     </section>

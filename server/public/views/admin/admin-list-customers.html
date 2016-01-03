@@ -1,5 +1,7 @@
+
+<nav ng-include="'/views/admin/admin-menu.html'"></nav>
 <h3>Customer List</h3>
-<div id="edit-container" ng-repeat="customer in customerList">
+<div id="edit-container" ng-repeat="customer in customerList | orderBy: '-customerID'">
     <div class="customer-list-container" >
         <div>
             <strong>Customer ID:</strong>&nbsp;{{customer.customerID}}<br>

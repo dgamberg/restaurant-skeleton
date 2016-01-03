@@ -1,5 +1,7 @@
+
+<nav ng-include="'/views/admin/admin-menu.html'"></nav>
 <h3>Orders List</h3>
-<div ng-repeat="order in orderList">
+<div ng-repeat="order in orderList | orderBy: '-orderDate'">
     <div class="order-entry-container">
         <p class="order-entry-date"><strong>DATE:</strong>&nbsp;{{order.orderDate | date:'medium'}}</p>
         <p class="order-entry"><strong>ORDER ID:</strong>&nbsp;{{order.orderID}}</p>
