@@ -18,6 +18,7 @@ var order = require('./routes/order');
 var orderID = require('./routes/orderID');
 var customerID = require('./routes/customerID');
 var mailAdmin = require('./routes/mailAdmin');
+var mailCustomer = require('./routes/mailCustomer');
 
 // App Set //
 app.set("port", (process.env.PORT || 5000));
@@ -31,6 +32,7 @@ app.use('/order', order);
 app.use('/orderID', orderID);
 app.use('/customerID', customerID);
 app.use('/mailAdmin', mailAdmin);
+app.use('/mailCustomer', mailCustomer);
 app.use('/', index);
 
 //Body Parser
