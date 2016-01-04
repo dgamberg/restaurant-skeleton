@@ -47,9 +47,7 @@ footer{
 main {
     float: left;
     width: 50%;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 25px;
+    margin: 25px 10px 50px 10px;
 }
 /*.menu-item-container.well {*/
     /*width: 75%;*/
@@ -314,4 +312,15 @@ hr.cartTotalLine {
 .edit-button{
     float: right;
     margin-top: -5px;
+}
+.thank-you-line {
+    margin-top: 21px;
+    margin-bottom: 21px;
+    border: 0;
+    border-top: 2px solid #18BCA2;
+    width: 50%;
+    float: left;
+}
+.thank-you-header{
+    clear: both;
 }

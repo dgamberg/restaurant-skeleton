@@ -17,8 +17,7 @@ var menu = require('./routes/menu');
 var order = require('./routes/order');
 var orderID = require('./routes/orderID');
 var customerID = require('./routes/customerID');
-
-var mail = require('./routes/mail')
+var mailAdmin = require('./routes/mailAdmin');
 
 // App Set //
 app.set("port", (process.env.PORT || 5000));
@@ -31,10 +30,10 @@ app.use('/menu', menu);
 app.use('/order', order);
 app.use('/orderID', orderID);
 app.use('/customerID', customerID);
-app.use('/mail', mail);
+app.use('/mailAdmin', mailAdmin);
 app.use('/', index);
 
-
+//Body Parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -60,9 +59,6 @@ app.use(passport.session());
 mongoDB.on('error', function(err){
     if(err) console.log("MONGO ERROR: ", err);
 });
-
-
-
 
 mongoDB.on('open', function(){
     console.log('Mongo Database Online... Meow!');

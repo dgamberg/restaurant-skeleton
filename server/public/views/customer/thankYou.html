@@ -1,40 +1,10 @@
-<h2>Thank You!</h2>
-<h5>Your order has been sent</h5>
-<h3>Order number:</h3>
-<h2>{{orderID - 1}}</h2>
-<hr/>
-<h5>Customer Name: {{customer.firstName}}&nbsp;{{customer.lastName}}</h5>
-<hr/>
-<h3>Summary</h3>
-<div ng-repeat="cartItem in currentCart track by $index"  >
-    <div class='order-item-container '>
-        <div class='order-summary-name container'>
-            {{ cartItem.name }}
-        </div>
-        <div class='order-summary-price'>
-            {{ cartItem.price | currency: '$'}}&nbsp;&nbsp;&nbsp;
-        </div>
-    </div>
-</div>
-<section >
-    <hr class="totalLine">
-    <div class="container">
-        <div class='order-summary-taxname'>
-            Order SubTotal:
-        </div>
-        <div class='order-summary-totals'>
-            &nbsp;{{ ordersTotal | currency:'$' }}
-        </div>
-        <div class='order-summary-taxname'>
-            Tax:
-        </div>
-        <div class='order-summary-taxprice'>
-            {{ orderTax | currency: '$'}}&nbsp;&nbsp;&nbsp;
-        </div>
-    </div>
-    <hr class="totalLine">
-    <div class='order-item-container'>
-        <div class='order-summary-totals-confirm' >
-            Final Total: &nbsp; {{ finalTotal | currency:'$' }}
-        </div>
-    </div>
+<section class="container">
+    <h2>Thank You!</h2>
+    <h4 >Your order is complete.</h4>
+    <hr class="thank-you-line"/>
+    <h4 class="thank-you-header">Order Number:&nbsp;<span id="orderNumber">{{orderID - 1}}</span></h4>
+    <hr class="thank-you-line"/>
+    <h4 class="thank-you-header">Customer Name: {{customer.firstName}}&nbsp;{{customer.lastName}}</h4>
+    <hr class="thank-you-line"/>
+    <h4 class="thank-you-header">Your Final Total: &nbsp; {{ finalTotal | currency:'$' }}</h4>
+</section>

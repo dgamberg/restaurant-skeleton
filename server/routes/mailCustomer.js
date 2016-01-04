@@ -9,19 +9,18 @@ router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({extended: true}));
 
 router.post('/', function(req,res){
-    var itemToBeMailed = {
-        orderFrom: req.body.email,
-        orderID: req.body.orderID
-    };
-
     transporter.sendMail({
-        from: req.body.email,
+        from: 'websiteorders@restaurant.com',
         to: 'dgamberg@gmail.com',
-        subject: 'New Order - order#' + req.body.orderID ,
-        text: 'Order Text will go here'
+        subject: 'Thank You For Your Order'  ,
+        text: "Thank You for your recent order. \n " +
+        "Here is your order information: " +
+        "Order ID: " + req.body.orderID + "\n" +
+        "Date Of Order " + req.body.orderDate +  "\n" +
+        "Customer Name: " + req.body.fullName + "\n"
     });
-    res.send("Email Sent to ", req.body.email);
-    console.log("Email sent...", itemToBeMailed);
+    res.sendStatus(200);
+    console.log("Email sent...");
 });
 
 module.exports = router;
