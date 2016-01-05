@@ -20,8 +20,6 @@ var customerID = require('./routes/customerID');
 var mailAdmin = require('./routes/mailAdmin');
 var mailCustomer = require('./routes/mailCustomer');
 
-// App Set //
-app.set("port", (process.env.PORT || 8440));
 
 // Routes
 app.use('/register', register);
@@ -66,6 +64,11 @@ mongoDB.on('open', function(){
 });
 
 // Listen //
-app.listen(app.get("port"), function(){
-    console.log("Listening on port: " + app.get("port"));
-});
+// App Set //
+//app.set("port", (process.env.PORT || 8440));
+//
+//app.listen(app.get("port"), function(){
+//    console.log("Listening on port: " + app.get("port"));
+//});
+
+app.listen(process.env.PORT || 5000);
