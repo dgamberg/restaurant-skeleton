@@ -39,7 +39,7 @@ app.use('/', index);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-var mongoDBurl = "mongodb://dg-restaurant-app:dg-restaurant-app@ds061454.mongolab.com:61454/dg-restaurant-app";
+var mongoDBurl = "mongodb://myuser:myuser@ds039135.mongolab.com:39135/heroku_6fmvhwxk";
 var mongoDB = mongoose.connect(mongoDBurl).connection;
 
 
