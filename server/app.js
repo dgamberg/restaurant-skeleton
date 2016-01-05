@@ -21,7 +21,7 @@ var mailAdmin = require('./routes/mailAdmin');
 var mailCustomer = require('./routes/mailCustomer');
 
 // App Set //
-app.set("port", (process.env.PORT || 5000));
+app.set("port", (process.env.PORT || 8440));
 
 // Routes
 app.use('/register', register);
