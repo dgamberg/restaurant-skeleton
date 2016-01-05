@@ -33,6 +33,8 @@ app.use('/mailAdmin', mailAdmin);
 app.use('/mailCustomer', mailCustomer);
 app.use('/', index);
 
+//app.set('port', (process.env.PORT || 5000));
+
 //Body Parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -69,6 +71,7 @@ mongoDB.on('open', function(){
 //
 //app.listen(app.get("port"), function(){
 //    console.log("Listening on port: " + app.get("port"));
+////});
+//app.listen(app.get('port'), function() {
+//    console.log('Node app is running on port', app.get('port'));
 //});
-
-app.listen(process.env.PORT );
