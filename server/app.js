@@ -71,4 +71,4 @@ mongoDB.on('open', function(){
 //    console.log("Listening on port: " + app.get("port"));
 //});
 
-app.listen(process.env.PORT || 5000);
+app.listen(process.env.PORT );
