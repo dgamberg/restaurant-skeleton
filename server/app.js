@@ -57,7 +57,6 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-
 mongoDB.on('error', function(err){
     if(err) console.log("MONGO ERROR: ", err);
 });

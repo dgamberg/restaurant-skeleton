@@ -1,5 +1,6 @@
-<div class="container" ng-controller="MainController">
+<div class="container">
     <h3>Add Menu Item</h3>
+    <p><nav ng-include="'/views/admin/admin-menu.html'"></nav></p>
     <form id="addMenuItem" ng-model="menuItem">
         <div>
             <input type="text" ng-model="menuItem.name" id="itemName" name="itemName" placeholder="Item Name"/>
