@@ -33,7 +33,7 @@ app.use('/mailAdmin', mailAdmin);
 app.use('/mailCustomer', mailCustomer);
 app.use('/', index);
 
-//app.set('port', (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || 5000));
 
 //Body Parser
 app.use(bodyParser.json());
@@ -65,13 +65,13 @@ mongoDB.on('open', function(){
     console.log('Mongo Database Online... Meow!');
 });
 
-// Listen //
-// App Set //
+ //Listen //
+ //App Set //
 //app.set("port", (process.env.PORT || 8440));
 //
 //app.listen(app.get("port"), function(){
 //    console.log("Listening on port: " + app.get("port"));
-////});
-//app.listen(app.get('port'), function() {
-//    console.log('Node app is running on port', app.get('port'));
 //});
+app.listen(app.get('port'), function() {
+    console.log('Node app is running on port', app.get('port'));
+});
