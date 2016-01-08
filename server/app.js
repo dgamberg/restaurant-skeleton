@@ -7,10 +7,10 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var port     = process.env.PORT || 5000;
 
-var session = require('express-session');
-var passport = require('./strategies/user');
-var register = require('./routes/register');
-var user = require('./routes/user');
+//var session = require('express-session');
+//var passport = require('./strategies/user');
+//var register = require('./routes/register');
+//var user = require('./routes/user');
 
 var index = require('./routes/index');
 var customer = require('./routes/customer');
@@ -24,8 +24,8 @@ var mailCustomer = require('./routes/mailCustomer');
 
 // Routes
 app.use('/', index);
-app.use('/register', register);
-app.use('/user', user);
+//app.use('/register', register);
+//app.use('/user', user);
 app.use('/customer', customer);
 app.use('/menu', menu);
 app.use('/order', order);
@@ -43,18 +43,19 @@ var mongoDB = mongoose.connect(mongoDBurl).connection;
 
 
 app.use(morgan('dev'));
+//app.use(passport.initialize());
+//app.use(passport.session());
+//
+//// Passport Session Configuration //
+//app.use(session({
+//    secret: 'secret',
+//    key: 'user',
+//    resave: 'true',
+//    saveUninitialized: false,
+//    cookie: {maxage: 600000, secure: false}
+//}));
 
-// Passport Session Configuration //
-app.use(session({
-    secret: 'secret',
-    key: 'user',
-    resave: 'true',
-    saveUninitialized: false,
-    cookie: {maxage: 600000, secure: false}
-}));
 
-app.use(passport.initialize());
-app.use(passport.session());
 
 mongoDB.on('error', function(err){
     if(err) console.log("MONGO ERROR: ", err);
@@ -64,12 +65,5 @@ mongoDB.on('open', function(){
     console.log('Mongo Database Online... Meow!');
 });
 
- //Listen //
- //App Set //
-//app.set("port", (process.env.PORT || 8440));
-//
-//app.listen(app.get("port"), function(){
-//    console.log("Listening on port: " + app.get("port"));
-//});
 app.listen(port);
 console.log('The magic happens on port ' + port);
