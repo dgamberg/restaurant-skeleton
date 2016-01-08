@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var morgan = require('morgan');
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+var port     = process.env.PORT || 5000;
 
 var session = require('express-session');
 var passport = require('./strategies/user');
@@ -32,9 +33,6 @@ app.use('/orderID', orderID);
 app.use('/customerID', customerID);
 app.use('/mailAdmin', mailAdmin);
 app.use('/mailCustomer', mailCustomer);
-
-
-app.set('port', (process.env.PORT || 5000));
 
 //Body Parser
 app.use(bodyParser.json());
@@ -73,6 +71,5 @@ mongoDB.on('open', function(){
 //app.listen(app.get("port"), function(){
 //    console.log("Listening on port: " + app.get("port"));
 //});
-app.listen(app.get('port'), function() {
-    console.log('Node app is running on port', app.get('port'));
-});
+app.listen(port);
+console.log('The magic happens on port ' + port);
