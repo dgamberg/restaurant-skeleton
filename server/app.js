@@ -22,6 +22,7 @@ var mailCustomer = require('./routes/mailCustomer');
 
 
 // Routes
+app.use('/', index);
 app.use('/register', register);
 app.use('/user', user);
 app.use('/customer', customer);
@@ -31,7 +32,7 @@ app.use('/orderID', orderID);
 app.use('/customerID', customerID);
 app.use('/mailAdmin', mailAdmin);
 app.use('/mailCustomer', mailCustomer);
-app.use('/', index);
+
 
 app.set('port', (process.env.PORT || 5000));
 
