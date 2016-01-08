@@ -3,23 +3,23 @@ var router = express.Router();
 var path = require('path');
 var passport = require('passport');
 
-//admin login passport route
-router.post('/user',
-        passport.authenticate('local', {
-            successRedirect: '#/user',
-            failureRedirect: '#/failure'
-        })
-);
-
-//Administrator passport route
-router.post('/',
-    passport.authenticate('local', {
-        //successRedirect: '/views/admin/admin.html',
-        //failureRedirect: '/views/customer/failure.html'
-        successRedirect: '#/admin',
-        failureRedirect: '#/failure'
-    })
-);
+////admin login passport route
+//router.post('/user',
+//        passport.authenticate('local', {
+//            successRedirect: '#/user',
+//            failureRedirect: '#/failure'
+//        })
+//);
+//
+////Administrator passport route
+//router.post('/',
+//    passport.authenticate('local', {
+//        //successRedirect: '/views/admin/admin.html',
+//        //failureRedirect: '/views/customer/failure.html'
+//        successRedirect: '#/admin',
+//        failureRedirect: '#/failure'
+//    })
+//);
 
 //Wildcard
 router.get("/*", function(req, res, next){
