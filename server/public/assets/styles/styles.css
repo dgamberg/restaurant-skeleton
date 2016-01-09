@@ -51,10 +51,14 @@ main {
 }
 aside {
     float: left;
-    width: 30%;
+    width: 300px;
     margin-top: 80px;
     margin-left: 0;
 
+}
+#topNavigation {
+    margin-top: 10px;
+    margin-left: 30px;
 }
 /*.menu-item-container.well {*/
     /*width: 75%;*/
@@ -68,10 +72,7 @@ img#logo-image {
     margin-top: 25px;
     border-radius: 10px;
 }
-#topNavigation {
-    margin-top: 10px;
-    margin-left: 70px;
-}
+
 #mainNavigation {
     float: left;
     border-radius: 5px;
