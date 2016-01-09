@@ -47,7 +47,14 @@ footer{
 main {
     float: left;
     width: 60%;
-    margin: 80px 20px 50px 40px;
+    margin: 80px 20px 0px 40px;
+}
+aside {
+    float: left;
+    width: 30%;
+    margin-top: 80px;
+    margin-left: 40px;
+
 }
 /*.menu-item-container.well {*/
     /*width: 75%;*/
@@ -63,7 +70,7 @@ img#logo-image {
 }
 #topNavigation {
     margin-top: 10px;
-    margin-left: 115px;
+    margin-left: 70px;
 }
 #mainNavigation {
     float: left;
@@ -164,12 +171,7 @@ section#dashboard-bottom {
     color: #fff;
     font-size: 14px;
 }
-aside {
-    float: right;
-    width: 30%;
-    margin-top: 80px;
 
-}
 .container {
     margin-right: auto;
     margin-left: auto;
