@@ -72,7 +72,9 @@ img#logo-image {
     margin-top: 25px;
     border-radius: 10px;
 }
-
+#adminMenu {
+    margin-top: 20px;
+}
 #mainNavigation {
     float: left;
     border-radius: 5px;
