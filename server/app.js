@@ -7,6 +7,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var port     = process.env.PORT || 5000;
 
+app.use(morgan('dev'));
 //var session = require('express-session');
 //var passport = require('./strategies/user');
 //var register = require('./routes/register');
@@ -16,6 +17,7 @@ var index = require('./routes/index');
 var customer = require('./routes/customer');
 var menu = require('./routes/menu');
 var order = require('./routes/order');
+var categories = require('./routes/categories');
 var orderID = require('./routes/orderID');
 var customerID = require('./routes/customerID');
 var mailAdmin = require('./routes/mailAdmin');
@@ -26,6 +28,7 @@ var mailCustomer = require('./routes/mailCustomer');
 
 //app.use('/register', register);
 //app.use('/user', user);
+app.use('/categories', categories);
 app.use('/customer', customer);
 app.use('/menu', menu);
 app.use('/order', order);
@@ -43,7 +46,6 @@ var mongoDBurl = "mongodb://myuser:myuser@ds039135.mongolab.com:39135/heroku_6fm
 var mongoDB = mongoose.connect(mongoDBurl).connection;
 
 
-app.use(morgan('dev'));
 //app.use(passport.initialize());
 //app.use(passport.session());
 //

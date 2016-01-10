@@ -47,7 +47,7 @@ footer{
 main {
     float: left;
     width: 600px;
-    margin: 60px 20px 0 20px;
+    margin: 60px 15px 0 0;
 }
 aside {
     float: left;
@@ -58,7 +58,7 @@ aside {
 }
 #topNavigation {
     margin-top: 10px;
-    margin-left: 65px;
+
 }
 #footerContainer{
     margin-top: 50px;
