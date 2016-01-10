@@ -220,6 +220,12 @@ myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', '$locati
             customerID: id
         });
     };
+    //-------------------------------------------------//
+    //          REQUEST FUNCTIONS                      //
+    //-------------------------------------------------//
+    0
+
+
 
     //-------------------------------------------------//
     //                   ADMIN                         //
@@ -238,8 +244,10 @@ myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', '$locati
             $scope.customerList = response.data;
         });
     };
+
     $scope.loadCustomerList();
 
+    $scope.menuItemToAdd = {};
     $scope.addMenuItem = function(menuItem){
         $http.post('/menu', menuItem).then( function(){
             $scope.message = "Item Added";
