@@ -79,22 +79,44 @@
                         <input type="text" ng-model="customer.zip" id="zip" name="zip"   />
                     </div>
             </section>
+            <section class="well">
 
-            <section class="well" >
-                <label for="cardType">Card Type</label>
-                    <select id="cardType" >
-                        <option  value="">- Select -</option>
-                        <option name="Visa" value="Visa">Visa</option>
-                        <option name="MasterCard" value="MasterCard">MasterCard</option>
-                    </select>
-                <div>
-                    <label for="CardNumber">Card Number</label>
-                    <input id="CardNumber" type="text" />
-                </div>
-                <div>
-                    <label for="expDate">Exp Date</label><input id="expDate" type="date"  >
-                </div>
+                    <div>
+                        <label>Pickup Date:</label>&nbsp;<input id="pickupDate" type="date">
+                    </div>
+
+                    <div>
+                        <label>Pickup Time:</label>&nbsp;<input id="pickupTime" type="time">
+                    </div>
+
+
             </section>
+            <section class="well">
+                <label for="paymentMethod">Payment Method</label>
+                <select id="paymentMethod" >
+                    <option  value="">- Select -</option>
+                    <option name="Cash" value="Visa">Cash At Pickup</option>
+                    <option name="Credit Card" value="MasterCard">Credit Card At Pickup</option>
+                </select>
+            </section>
+
+
+            <div>
+            <!--<section class="well" >-->
+                <!--<label for="cardType">Card Type</label>-->
+                    <!--<select id="cardType" >-->
+                        <!--<option  value="">- Select -</option>-->
+                        <!--<option name="Visa" value="Visa">Visa</option>-->
+                        <!--<option name="MasterCard" value="MasterCard">MasterCard</option>-->
+                    <!--</select>-->
+                <!--<div>-->
+                    <!--<label for="CardNumber">Card Number</label>-->
+                    <!--<input id="CardNumber" type="text" />-->
+                <!--</div>-->
+                <!--<div>-->
+                    <!--<label for="expDate">Exp Date</label><input id="expDate" type="date"  >-->
+                <!--</div>-->
+            <!--</section>-->
 
             <button ng-click="completeOrder()" class="btn btn-primary" >Complete My Order</button>
 

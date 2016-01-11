@@ -1,29 +1,28 @@
 .menu-item-container {
     color: #000;
     margin-right: auto;
-    margin-bottom: 15px;
     border-radius: 5px;
-    padding: 12px 10px 30px 15px;
+    padding: 15px 15px 0px 15px;
     min-height: 110px;
+    margin-bottom: 25px;
 }
-
 .menu-item-name{
     float: left;
     font-size: 20px;
 }
 .menu-item-price{
-    float: right;
-    font-size: 18px;
-    margin-left: 10px;
+    font-size: 20px;
 }
 .menu-item-description {
     clear: left;
-    width: 75%;
 }
 .menu-item-image {
-    width: 100%;
+    width: 300px;
+    height: 200px;
     border-radius: 10px;
     margin-bottom: 20px;
+    float: right;
+    margin-left: 10px;
 }
 .cart-item-name{
     float: left;

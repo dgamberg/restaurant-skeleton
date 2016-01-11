@@ -48,7 +48,8 @@ myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', '$locati
     $scope.orderTax = 0;
 
     $scope.addToOrder = function(menuItem){
-        $scope.showCart();
+        $scope.addButtonText = "Item Added";
+        $scope.showCart();;
         $scope.currentCart.push(menuItem);
         shoppingCart.ordersTotal = 0;
         $scope.ordersTotal = 0;
@@ -83,8 +84,9 @@ myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', '$locati
     };
 
     $scope.checkoutOrder = function(){
-        $location.path('/completeOrder');
         $scope.hideCart();
+        $location.path('/completeOrder');
+
     };
 
     $scope.calculateTax = function(totalBeforeTax){
@@ -223,9 +225,6 @@ myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', '$locati
     //-------------------------------------------------//
     //          REQUEST FUNCTIONS                      //
     //-------------------------------------------------//
-    0
-
-
 
     //-------------------------------------------------//
     //                   ADMIN                         //
