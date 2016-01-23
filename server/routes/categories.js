@@ -14,7 +14,7 @@ mongoose.model('Categories',
         "category_id": Number,
         "category_name": String
     }, {
-        collection: 'Categories'
+        collection: 'categories'
     }));
 var Categories = mongoose.model('Categories');
 

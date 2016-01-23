@@ -1,8 +1,8 @@
-myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', '$location',
-    function($scope, $http, shoppingCart, $location){
+myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', 'menuCategories' , '$location',
+    function($scope, $http, shoppingCart, menuCategories, $location){
 
     //-------------------------------------------------//
-    //         Menu Display FUNCTIONS                 //
+    //         Menu Display FUNCTIONS
     //-------------------------------------------------//
     $scope.menuArray = [];
     $scope.displayMenu = function(){
@@ -11,6 +11,11 @@ myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', '$locati
         });
     };
     $scope.displayMenu();
+
+    //-------------------------------------------------//
+    //      LOAD MENU CATEGORIES
+    //-------------------------------------------------//
+    $scope.menuCategories = menuCategories.getMenuCategories();
 
     //-------------------------------------------------//
     //         Shopping Cart FUNCTIONS                 //

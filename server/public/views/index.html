@@ -5,17 +5,18 @@
     <title>Online Ordering</title>
     <link rel="stylesheet" href="/vendors/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/styles/styles.css"/>
-    <link rel="stylesheet" href="/vendors/ui-grid.css"/>
 
     <script type="text/javascript" src="/vendors/angular.min.js"></script>
     <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
     <script type="text/javascript" src="/vendors/angular-animate.js"></script>
-    <script type="text/javascript" src="/vendors/ui-grid.js"></script>
     <script type="text/javascript" src="/vendors/jquery.min.js"></script>
+
     <script type="text/javascript" src="/assets/scripts/app.js"></script>
-    <script type="text/javascript" src="/assets/scripts/mainController.js"></script>
-    <script type="text/javascript" src="/assets/scripts/shoppingCart.js"></script>
-    <script type="text/javascript" src="/assets/scripts/siteRoutes.js"></script>
+    <script type="text/javascript" src="/assets/scripts/controllers/mainController.js"></script>
+    <script type="text/javascript" src="/assets/scripts/directives/menuPage.js"></script>
+    <script type="text/javascript" src="/assets/scripts/factories/menuCategories.js"></script>
+    <script type="text/javascript" src="/assets/scripts/factories/shoppingCart.js"></script>
+    <script type="text/javascript" src="/assets/scripts/routes/siteRoutes.js"></script>
 
 
 </head>
@@ -23,8 +24,6 @@
         <section class="container"  >
 
             <header ng-include="'/views/includes/navigation.html'"></header>
-
-            <!--<nav ng-include="'/views/includes/menu.html'"></nav>-->
 
             <main ng-view ng-cloak></main>
 
