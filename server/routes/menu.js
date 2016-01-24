@@ -4,6 +4,10 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+var bodyParser = require('body-parser');
+router.use(bodyParser.json());
+router.use(bodyParser.urlencoded({extended: true}));
+
 mongoose.model('Menu', new Schema({"_id": String, "menu_id": Number, "name": String, "price": String, "category": String, "description": String}, {collection: 'menu'}));
 var Menu = mongoose.model('Menu');
 
@@ -14,6 +18,16 @@ router.get('/', function(req,res){
         if(err){ console.log("ERROR!: ", err); }
         res.send(data);
 
+    });
+});
+router.get('/findAllByCategory', function(req,res){
+    console.log(req.query.category);
+    Menu.find({
+        "category": req.query.category
+    }, function(err, data){
+        if(err){ console.log("ERROR!: ", err); }
+        console.log(data);
+        res.send(data);
     });
 });
 

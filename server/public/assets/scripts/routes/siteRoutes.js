@@ -5,20 +5,8 @@ myApp.config(['$routeProvider', function($routeProvider){
             templateUrl: "/views/partials/home.html"
         }).
         //MENU CATEGORIES
-        when('/appetizers', {
-            templateUrl: "views/menu/appetizers.html"
-        }).
-        when('/burgers', {
-            templateUrl: "views/menu/burgers.html"
-        }).
-        when('/salads', {
-            templateUrl: "views/menu/salads.html"
-        }).
-        when('/sandwiches', {
-            templateUrl: "views/menu/sandwiches.html"
-        }).
-        when('/kids-menu', {
-            templateUrl: "views/menu/kids.html"
+        when('/menu', {
+            template: "<menu-page></menu-page>"
         }).
 
         // SITE LINKS

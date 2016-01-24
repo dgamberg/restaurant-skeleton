@@ -1,7 +1,10 @@
 
-<h3>{{category}}</h3>
 <div id="menuContainer" >
-    <div ng-repeat="menuItem in menuArray | filter: menuItem.category='{{category}}'"  >
+    <div class="container" >
+        <a ng-repeat="category in menuCategories" class="btn btn-primary menu-categories" ng-click="filters.category = category">{{category}}</a>
+    </div>
+    <h3>{{category}}</h3>
+    <div ng-repeat="menuItem in menuArray | filter:filters"  >
         <div class='menu-item-container well'>
             <div class="image-container">
                 <img class="menu-item-image" ng-src="{{ menuItem.image_url }}"/>

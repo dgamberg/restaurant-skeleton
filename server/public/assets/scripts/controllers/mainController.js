@@ -12,9 +12,17 @@ myApp.controller('MainController', ['$scope',  '$http', 'shoppingCart', 'menuCat
     };
     $scope.displayMenu();
 
+    $scope.showMenuByCategory = function(category){
+        http.get("/menu/findAllByCategory?category='" + category + "'").then(function(response){
+            console.log(response.data);
+            $scope.menuArray = response.data;
+        });
+    };
+
     //-------------------------------------------------//
     //      LOAD MENU CATEGORIES
     //-------------------------------------------------//
+    $scope.filters = { };
     $scope.menuCategories = menuCategories.getMenuCategories();
 
     //-------------------------------------------------//
