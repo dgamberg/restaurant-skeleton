@@ -1,8 +1,20 @@
-myApp.factory('Authentication', ['$rootScope', '$firebaseAuth', 'FIREBASE_URL', '$location',
-    function( $rootScope, $firebaseAuth, FIREBASE_URL, $location){
-
+myApp.factory('Authentication',
+    ['$rootScope', '$firebaseAuth', '$firebaseObject', 'FIREBASE_URL', '$location',
+    function( $rootScope, $firebaseAuth,  $firebaseObject, FIREBASE_URL, $location ){
         var ref = new Firebase(FIREBASE_URL);
         var auth = $firebaseAuth(ref);
+
+        //detect authentication
+        auth.$onAuth(function(authUser){
+            if(authUser){
+                var userRef = new Firebase(FIREBASE_URL + 'users/' + authUser.uid);
+                var userObj = $firebaseObject(userRef);
+                $rootScope.currentUser = userObj;
+            }
+            else {
+                $rootScope.currentUser = '';
+            }
+        });
 
         return {
             login: function(user){
@@ -14,6 +26,9 @@ myApp.factory('Authentication', ['$rootScope', '$firebaseAuth', 'FIREBASE_URL', 
                 }).catch(function(error){
                     $rootScope.message = error.message;
                 });
+            },
+            logout: function(){
+                return auth.$unauth();
             },
             register: function(user){
                 auth.$createUser({

@@ -357,3 +357,6 @@ input.ng-valid.ng-touched{
 input{
     margin-bottom: 5px;
 }
+.login-link {
+    float: left;
+}
