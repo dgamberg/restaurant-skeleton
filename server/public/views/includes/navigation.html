@@ -16,10 +16,10 @@
             <li role="presentation" ><a ng-href="#/about">About</a></li>
             <li role="presentation" ><a ng-href="#/contact">Contact</a></li>
                        <li role="presentation" ng-show="currentUser" class="active"  >
-                <a> Hi,{{currentUser.firstName}}&nbsp;|&nbsp;
+                <a class="login-link"> Hi,{{currentUser.firstName}}&nbsp;|&nbsp;
                     Cart&nbsp;(&nbsp;{{currentCart.length}}&nbsp;)
                 </a>
-                <a ng-href="#/login" ng-click="logout()">&nbsp;Logout</a>
+                <a class="login-link" ng-href="#/login" ng-click="logout()">&nbsp;Logout</a>
             </li>
             <li role="presentation" ng-hide="currentUser" >
                 <a class="login-link" ng-href="#/login">Log In</a>&nbsp;|&nbsp;
