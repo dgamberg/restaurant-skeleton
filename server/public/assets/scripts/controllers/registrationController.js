@@ -1,25 +1,10 @@
-myApp.controller('RegistrationController', ['$scope', '$firebaseAuth',
-
-    function( $scope, $firebaseAuth ){
-        console.log('Registration Controller Loaded');
-        var ref = new Firebase('https://dg-restaurant-users.firebaseio.com/');
-        var auth = $firebaseAuth(ref);
+myApp.controller('RegistrationController', ['$scope', 'Authentication', function( $scope, Authentication ){
 
         $scope.login = function(){
-            $scope.message = "Welcome " + $scope.user.username;
-            $scope.loginForm = {};
+            Authentication.login($scope.user);
         };
 
         $scope.register = function(){
-            $scope.message = "Thank You for registering, " + $scope.user.firstName;
-            //auth.createUser({
-            //
-            //}).then(function(regUser){
-            //
-            //}).catch(function(error){
-            //
-            //});
-            $scope.registrationForm = {};
-
+            Authentication.register($scope.user);
         }; //register
 }]); // Controller

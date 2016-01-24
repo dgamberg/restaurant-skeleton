@@ -5,8 +5,8 @@
     <form name="loginForm" ng-submit="login()" novalidate>
         <fieldset>
             <div>
-                <input placeholder="User Name"  ng-model="user.username" type="text" name="username" id="username" ng-required="true">
-                <p class="validation-error" ng-show="loginForm.username.$invalid && loginForm.username.$touched">Please Enter Your Username</p>
+                <input placeholder="Email" ng-model="user.email"  type="email" name="email" id="email" ng-required="true">
+                <p class="validation-error" ng-show="loginForm.email.$invalid && loginForm.email.$touched">Please Enter Your Email</p>
             </div>
             <div>
                 <input placeholder="Password"  ng-model="user.password" type="password"  name="password" id="password" ng-required="true">
