@@ -32,6 +32,10 @@ myApp.config(['$routeProvider', function($routeProvider){
             templateUrl: "views/customer/register.html",
             controller: "RegistrationController"
         }).
+        when('/success', {
+            templateUrl: "views/customer/success.html",
+            controller: "RegistrationController"
+        }).
         //Form Links
         when('/completeOrder', {
             templateUrl: "views/customer/completeOrder.html"

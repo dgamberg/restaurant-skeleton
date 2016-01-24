@@ -38,3 +38,4 @@ myApp.factory('Authentication', ['$rootScope', '$firebaseAuth', 'FIREBASE_URL', 
             }
         };
     }]); // Factory
+
