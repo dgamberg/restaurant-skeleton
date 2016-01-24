@@ -34,7 +34,12 @@ myApp.config(['$routeProvider', function($routeProvider){
         }).
         when('/success', {
             templateUrl: "views/customer/success.html",
-            controller: "RegistrationController"
+            controller: "RegistrationController",
+            resolve: {
+                currentAuth: function(Authentication){
+                    return Authentication.requireAuth();
+                }
+            }
         }).
         //Form Links
         when('/completeOrder', {

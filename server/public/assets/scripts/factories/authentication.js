@@ -30,6 +30,9 @@ myApp.factory('Authentication',
             logout: function(){
                 return auth.$unauth();
             },
+            requireAuth: function(){
+                return auth.$requireAuth();
+            },
             register: function(user){
                 auth.$createUser({
                     email: user.email,
