@@ -25,10 +25,12 @@ myApp.config(['$routeProvider', function($routeProvider){
 
         //USER LINKS
         when('/login', {
-            templateUrl: "views/customer/login.html"
+            templateUrl: "views/customer/login.html",
+            controller: "RegistrationController"
         }).
         when('/register', {
-            templateUrl: "views/customer/register.html"
+            templateUrl: "views/customer/register.html",
+            controller: "RegistrationController"
         }).
         //Form Links
         when('/completeOrder', {

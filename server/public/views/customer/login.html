@@ -1,20 +1,21 @@
 
 <section class="container">
     <h1 class="lead">Login</h1>
-
-        <form action="/" method="post">
+    <p class="message" ng-show="message">{{message}}</p>
+    <form name="loginForm" ng-submit="login()" novalidate>
+        <fieldset>
             <div>
-                <label for="username">Username:</label>
-                <input type="text" name="username" id="username"/>
+                <input placeholder="User Name"  ng-model="user.username" type="text" name="username" id="username" ng-required="true">
+                <p class="validation-error" ng-show="loginForm.username.$invalid && loginForm.username.$touched">Please Enter Your Username</p>
             </div>
             <div>
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password"/>
+                <input placeholder="Password"  ng-model="user.password" type="password"  name="password" id="password" ng-required="true">
+                <p class="validation-error" ng-show="loginForm.password.$invalid && loginForm.password.$touched">Please Enter Your Password</p>
             </div>
-            <div>
-                <input class="btn btn-primary" type="submit" value="Log In"/>
-                <a href="#/register">Register</a>
-            </div>
+        </fieldset>
+            <input ng-disabled="loginForm.$invalid" class="btn btn-primary" type="submit" value="Login"/>
+            <p>or&nbsp;<a  ng-href="#/register">Register</a></p>
         </form>
+
 
 </section>

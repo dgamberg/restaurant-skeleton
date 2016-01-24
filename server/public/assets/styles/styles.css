@@ -345,3 +345,15 @@ hr.cartTotalLine {
     margin-right: 10px;
     margin-top: 10px;
 }
+.validation-error {
+    color: red;
+}
+input.ng-invalid.ng-touched{
+    border: 2px solid red;
+}
+input.ng-valid.ng-touched{
+    border: 2px solid green;
+}
+input{
+    margin-bottom: 5px;
+}
