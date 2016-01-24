@@ -16,7 +16,7 @@
             <li role="presentation" ><a ng-href="#/about">About</a></li>
             <li role="presentation" ><a ng-href="#/contact">Contact</a></li>
                        <li role="presentation" ng-show="currentUser" class="active"  >
-                <a class="login-link"> Hi,{{currentUser.firstName}}&nbsp;|&nbsp;
+                <a class="login-link"> Hi,&nbsp;{{currentUser.firstName}}&nbsp;&nbsp;|&nbsp;
                     Cart&nbsp;(&nbsp;{{currentCart.length}}&nbsp;)
                 </a>
                 <a class="login-link" ng-href="#/login" ng-click="logout()">&nbsp;Logout</a>
