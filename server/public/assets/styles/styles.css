@@ -359,6 +359,7 @@ input{
 }
 .login-link {
     float: left;
+    margin-right: 2px;
 }
 .menu-header{
     margin-left: 10px;
