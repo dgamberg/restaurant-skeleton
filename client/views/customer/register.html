@@ -1,0 +1,25 @@
+<section class="container">
+    <h1 class="lead">Register</h1>
+        <p class="message" ng-show="message">{{message}}</p>
+        <form ng-submit="register()" name="registrationForm" novalidate>
+            <fieldset>
+                <div>
+                    <input placeholder="First Name" ng-model="user.firstName" type="text" name="firstName" id="firstName" ng-required="true">
+                    <p class="validation-error" ng-show="registrationForm.firstName.$invalid && registrationForm.firstName.$touched">Please Enter Your First Name</p>
+                </div>
+                <div>
+                    <input placeholder="Last Name"  ng-model="user.lastName" type="text" name="lastName" id="lastName" ng-required="true">
+                    <p class="validation-error" ng-show="registrationForm.lastName.$invalid && registrationForm.lastName.$touched">Please Enter Your Last Name</p>
+                </div>
+                <div>
+                    <input placeholder="Email" ng-model="user.email"  type="email" name="email" id="email" ng-required="true">
+                    <p class="validation-error" ng-show="registrationForm.email.$invalid && registrationForm.email.$touched">Please Enter Your Email</p>
+                </div>
+                <div>
+                    <input placeholder="Password"  ng-model="user.password" type="password"  name="password" id="password" ng-required="true">
+                    <p class="validation-error" ng-show="registrationForm.password.$invalid && registrationForm.password.$touched">Please Enter Your Password</p>
+                </div>
+            </fieldset>
+            <input ng-disabled="registrationForm.$invalid" class="btn btn-primary" type="submit" value="Register"/>
+        </form>
+</section>

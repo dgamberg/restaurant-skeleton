@@ -1,0 +1,21 @@
+<section>
+    <nav ng-include="'/views/admin/admin-menu.html'"></nav>
+    <h3>Customer List</h3>
+    <a class="btn btn-primary" href="#/admin-add-customer">Add Customer</a>
+    <div id="edit-container" ng-repeat="customer in customerList | orderBy: '-customerID'">
+        <div class="customer-list-container" >
+            <div>
+                <strong>Customer ID:</strong>&nbsp;{{customer.customerID}}<br>
+                <strong>Name:</strong>&nbsp;{{customer.firstName}}&nbsp;{{customer.lastName}}<br>
+                <strong>Email:</strong>&nbsp;<a href="mailto:{{customer.email}}">{{customer.email}}</a><br>
+            </div>
+            <div>
+                <strong>Address:</strong><br>
+                {{customer.street}}<br>
+                {{customer.city}}, {{customer.state}} {{customer.zip}}
+            </div>
+        </div>
+    </div>
+</section>
+
+

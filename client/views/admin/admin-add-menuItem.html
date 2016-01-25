@@ -1,0 +1,21 @@
+<div class="container">
+    <h3>Add Menu Item</h3>
+    <p><nav ng-include="'/views/admin/admin-menu.html'"></nav></p>
+    <form name="addMenuItem" id="addMenuItem" novalidate>
+        <div>
+            <input type="text" ng-model="menuItem.name" id="itemName" name="itemName" ng-required="true" placeholder="Item Name"/>
+        </div>
+        <div>
+            <input type="text" ng-model="menuItem.category" id="itemCategory" name="itemCategory" ng-required="true" placeholder="Item Category"/>
+        </div>
+        <div>
+            <input type="text" ng-model="menuItem.price" id="itemPrice" name="itemPrice" ng-required="true" placeholder="Item Price"/>
+        </div>
+        <div>
+            <textarea type="text" ng-model="menuItem.description" class="item-description" ng-required="true" placeholder="Description"></textarea>
+        </div>
+        <div>
+            <button class="btn btn-primary" ng-click="addMenuItem(menuItem)" >Add Menu Item</button>
+        </div>
+    </form>
+</div>

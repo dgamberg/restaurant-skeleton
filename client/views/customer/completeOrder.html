@@ -1,0 +1,127 @@
+<div class="instructions">
+    <div class="container-fluid" >
+        <h3 id="welcome" class="lead">Complete My Order</h3>
+
+            <section  class="well" >
+                <label>Order Summary:</label>
+                <div ng-show="ordersTotal" class="container">
+                    <div ng-repeat="cartItem in currentCart track by $index"  >
+                        <div class='order-item-container '>
+                            <div class='order-summary-name container'>
+                                {{ cartItem.name }}
+                            </div>
+                            <div class='order-summary-price'>
+                                {{ cartItem.price | currency: '$'}}&nbsp;&nbsp;&nbsp;
+                            </div>
+                        </div>
+                    </div>
+                    <section >
+                        <hr class="totalLine">
+                        <div class="container">
+                            <div class='order-summary-taxname'>
+                                Order SubTotal:
+                            </div>
+                            <div class='order-summary-totals'>
+                                &nbsp;{{ ordersTotal | currency:'$' }}
+                            </div>
+                            <div class='order-summary-taxname'>
+                                Tax:
+                            </div>
+                            <div class='order-summary-taxprice'>
+                                {{ orderTax | currency: '$'}}&nbsp;&nbsp;&nbsp;
+                            </div>
+                        </div>
+                        <hr class="totalLine">
+                        <div class='order-item-container'>
+                            <div class='order-summary-totals' >
+                                Your Order Total:
+                            </div>
+                            <div class='order-summary-totals'>
+                                {{ finalTotal | currency:'$' }}
+                            </div>
+                        </div>
+                        <div  class='order-button-container'>
+                            <button ng-click="changeMyOrder()" class="btn btn-primary" >Change My Order</button>
+                        </div>
+
+                    </section>
+
+                </div>
+            </section>
+        <form id="addCustomer"  >
+            <section class="well">
+                    <div>
+                        <label for="firstName">First Name</label>
+                        <input type="text" ng-model="customer.firstName" id="firstName" name="firstName" />
+                    </div>
+                    <div>
+                        <label for="lastName">Last Name</label>
+                        <input type="text"  ng-model="customer.lastName" id="lastName" name="lastName" />
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="text"  ng-model="customer.email "id="email" name="email" />
+                    </div>
+                    <div>
+                        <label for="street">Street</label>
+                        <input type="text"  ng-model="customer.street" id="street" name="street"/>
+                    </div>
+                    <div>
+                        <label for="city">City</label>
+                        <input type="text"  ng-model="customer.city" id="city" name="city" />
+                    </div>
+                    <div>
+                        <label for="state">State</label>
+                        <input type="text"  ng-model="customer.state" id="state" name="state"/>
+                    </div>
+                    <div>
+                        <label for="zip">Zip</label>
+                        <input type="text" ng-model="customer.zip" id="zip" name="zip"   />
+                    </div>
+            </section>
+            <section class="well">
+
+                    <div>
+                        <label>Pickup Date:</label>&nbsp;<input id="pickupDate" type="date">
+                    </div>
+
+                    <div>
+                        <label>Pickup Time:</label>&nbsp;<input id="pickupTime" type="time">
+                    </div>
+
+
+            </section>
+            <section class="well">
+                <label for="paymentMethod">Payment Method</label>
+                <select id="paymentMethod" >
+                    <option  value="">- Select -</option>
+                    <option name="Cash" value="Visa">Cash At Pickup</option>
+                    <option name="Credit Card" value="MasterCard">Credit Card At Pickup</option>
+                </select>
+            </section>
+
+
+            <div>
+            <!--<section class="well" >-->
+                <!--<label for="cardType">Card Type</label>-->
+                    <!--<select id="cardType" >-->
+                        <!--<option  value="">- Select -</option>-->
+                        <!--<option name="Visa" value="Visa">Visa</option>-->
+                        <!--<option name="MasterCard" value="MasterCard">MasterCard</option>-->
+                    <!--</select>-->
+                <!--<div>-->
+                    <!--<label for="CardNumber">Card Number</label>-->
+                    <!--<input id="CardNumber" type="text" />-->
+                <!--</div>-->
+                <!--<div>-->
+                    <!--<label for="expDate">Exp Date</label><input id="expDate" type="date"  >-->
+                <!--</div>-->
+            <!--</section>-->
+
+            <button ng-click="completeOrder()" class="btn btn-primary" >Complete My Order</button>
+
+            <div ng-model="messages" ng-show="messages">{{messages}}</div>
+        </form>
+
+    </div>
+</div>

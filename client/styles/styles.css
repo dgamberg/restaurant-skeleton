@@ -1,0 +1,371 @@
+.menu-item-container {
+    color: #000;
+    margin-right: auto;
+    border-radius: 5px;
+    padding: 15px 15px 0px 15px;
+    min-height: 110px;
+    margin-bottom: 25px;
+}
+.menu-item-name{
+    float: left;
+    font-size: 20px;
+}
+.menu-item-price{
+    font-size: 20px;
+}
+.menu-item-description {
+    clear: left;
+}
+.menu-item-image {
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    float: right;
+    margin-left: 10px;
+}
+.cart-item-name{
+    float: left;
+    font-size: 16px;
+}
+.cart-item-price{
+    float: right;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.cart-item-container {
+    color: #000;
+    margin-right: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 8px 5px 8px 10px;
+}
+ul.nav.navbar-stacked {
+    float: left;
+    width: 140px;
+}
+footer{
+    clear: both;
+}
+main {
+    float: left;
+    width: 55%;
+    margin: 60px 15px 0 0;
+}
+aside {
+    float: left;
+    margin-top: 115px;
+    margin-left: 20px;
+
+}
+.add-to-order-button {
+    margin-bottom: 20px;
+}
+#topNavigation {
+    margin-top: 10px;
+
+}
+#footerContainer{
+    margin-top: 50px;
+}
+/*.menu-item-container.well {*/
+    /*width: 75%;*/
+/*}*/
+/*.cart-item-container.well {*/
+    /*width: 75%;*/
+/*}*/
+img#logo-image {
+    width: 185px;
+    float: left;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+#adminMenu {
+    margin-top: 20px;
+}
+#mainNavigation {
+    float: left;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.order-total {
+    padding: 10px 30px 10px 10px;
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 16px;
+    margin-right: -12px;
+}
+#login-box {
+    float: right;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+h4.menu-top-text {
+    margin-left: 15px;
+    margin-top: 10px;
+}
+#footer-text {
+    padding: 10px 25px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+.login-input{
+    margin-bottom: 5px;
+}
+.admin-menu-item{
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.admin-menu-item:last-child{
+    margin-bottom: 50px;
+}
+#home-image {
+    width: 550px;
+    border: 2px solid #BE1011;
+    box-shadow: 2px 2px 4px #000;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+.edit-link {
+    float: right;
+}
+#edit-container{
+    margin-top: 25px;
+}
+label{
+    width: 125px;
+}
+.dashboard-item {
+    width: 30%;
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 10px;
+    height: 150px;
+    overflow: scroll;
+}
+section#dashboard-bottom {
+    clear: both;
+}
+.dashboard-tab-header {
+    color: #fff;
+    font-size: 20px;
+}
+.dashboard-tab-header:hover {
+    text-decoration: underline;
+}
+#dashboardNewOrders {
+    background-color: #5CB85C;
+    padding: 12px;
+    border-radius: 15px 15px 0 0;
+}
+#dashboardReady{
+    background-color:#D9534F;
+    padding: 12px;
+    border-radius: 15px 15px 0 0;
+    clear: both;
+}
+#dashboardInProcess{
+    background-color: #F0AD4E;
+    padding: 12px;
+    border-radius: 15px 15px 0 0;
+}
+#dashboardCompleted{
+    background-color: #5BC0DE;
+    padding: 12px;
+    border-radius: 15px 15px 0 0;
+}
+.dashboard-orders{
+    color: #fff;
+    font-size: 14px;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+/* The starting CSS styles for the enter animation */
+.ng-enter {
+    -webkit-transition: .5s linear all;
+    transition: .5s linear all;
+    opacity:0;
+}
+/* The finishing CSS styles for the enter animation */
+.ng-enter-active {
+    opacity:1;
+}
+/*/!* now the element will fade out before it is removed from the DOM *!/*/
+/*.ng-leave {*/
+    /*-webkit-transition: .2s linear all;*/
+    /*opacity:1;*/
+/*}*/
+/*.ng-leave-active {*/
+    /*opacity:0;*/
+/*}*/
+
+
+
+
+.order-item-container {
+    clear: both;
+}
+
+.order-button-container{
+    clear: both;
+    padding-top: 15px;
+}
+.order-summary-name{
+    float: left;
+    width: 240px;
+    font-weight: bold;
+}
+.order-summary-price{
+    float: left;
+    font-weight: bold;
+}
+.order-summary-taxprice{
+    float: left;
+    font-weight: bold;
+    padding-left: 4px;
+}
+.order-summary-name{
+    clear: both;
+    width: 240px;
+    font-weight: bold;
+}
+.order-summary-taxname{
+    clear: both;
+    float: left;
+    width: 240px;
+    font-weight: bold;
+    margin-right: -15px;
+}
+
+.order-summary-totals{
+    float:left;
+    width: 240px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.order-summary-totals-confirm {
+    float: right;
+    width: 240px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-right: 85px;
+}
+hr.totalLine {
+    clear: both;
+    border-top: 2px solid #000;
+    width: 40%;
+    float: left;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+hr.cartTotalLine {
+    clear: both;
+    border-top: 2px solid #000;
+    width: 100%;
+    float: left;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.admin-container{
+    padding-bottom: 20px;
+}
+.live-orders-container {
+    margin-bottom: 25px;
+}
+
+.red-x {
+    width: 15px;
+    margin-top: -4px;
+}
+.total-text{
+    padding-left: 5px;
+}
+.order-entry{
+    float: left;
+    width: 33%;
+}
+
+.order-entry-container{
+    clear: both;
+    margin-bottom: 20px;
+    background-color:  rgba(143, 149, 148, 0.15);;
+    border-radius: 5px;
+    padding: 15px;
+}
+.customer-list-container{
+    clear: both;
+    margin-bottom: 20px;
+    background-color:  rgba(143, 149, 148, 0.15);;
+    border-radius: 5px;
+    padding: 15px;
+}
+.top-menu-categories{
+    min-width: 500px;
+}
+.order-entry-total{
+    clear: both;
+    margin-top: 20px;
+}
+.order-cart-price{
+    float: right;
+}
+.order-cart-items{
+    clear: both;
+}
+.edit-button{
+    float: right;
+    margin-top: -5px;
+}
+.thank-you-line {
+    margin-top: 21px;
+    margin-bottom: 21px;
+    border: 0;
+    border-top: 2px solid #18BCA2;
+    width: 50%;
+    float: left;
+}
+.thank-you-header{
+    clear: both;
+}
+.menu-categories {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.validation-error {
+    color: red;
+}
+input.ng-invalid.ng-touched{
+    border: 2px solid red;
+}
+input.ng-valid.ng-touched{
+    border: 2px solid green;
+}
+input{
+    margin-bottom: 5px;
+}
+.login-link {
+    float: left;
+    margin-right: 2px;
+}
+.menu-header{
+    margin-left: 10px;
+}
+.top-menu-categories {
+    min-width: 500px;
+}
