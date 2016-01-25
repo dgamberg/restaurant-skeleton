@@ -315,7 +315,9 @@ hr.cartTotalLine {
     border-radius: 5px;
     padding: 15px;
 }
-
+.top-menu-categories{
+    min-width: 500px;
+}
 .order-entry-total{
     clear: both;
     margin-top: 20px;
@@ -363,4 +365,7 @@ input{
 }
 .menu-header{
     margin-left: 10px;
+}
+.top-menu-categories {
+    min-width: 500px;
 }
